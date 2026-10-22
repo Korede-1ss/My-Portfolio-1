@@ -3,13 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+    <title>Oloyede Fawaaz | Portfolio</title>
+    <meta
+      name="description"
+      content="Oloyede Fawaaz is a front-end developer and cybersecurity student building responsive web experiences with security-minded thinking."
+    />
+    <meta name="theme-color" content="#0b1220" />
+    <link rel="canonical" href="https://korede-1ss.github.io/My-Portfolio-1/" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Oloyede Fawaaz | Portfolio" />
+    <meta
+      property="og:description"
+      content="Front-end development, cybersecurity learning, selected projects, and simple CSS animation lessons."
+    />
+    <meta property="og:url" content="https://korede-1ss.github.io/My-Portfolio-1/" />
+    <meta
+      property="og:image"
+      content="https://korede-1ss.github.io/My-Portfolio-1/Asset/Fawaaz-logo.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="720" />
+    <meta property="og:image:height" content="719" />
+    <meta property="og:image:alt" content="Portrait photograph of Oloyede Fawaaz" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Oloyede Fawaaz | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Front-end development, cybersecurity learning, selected projects, and simple CSS animation lessons."
+    />
+    <meta
+      name="twitter:image"
+      content="https://korede-1ss.github.io/My-Portfolio-1/Asset/Fawaaz-logo.jpg"
+    />
+    <meta name="twitter:image:alt" content="Portrait photograph of Oloyede Fawaaz" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
   <script
@@ -32,428 +65,655 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
   />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-  />
   <link rel="stylesheet" href="./Portfolio.css" />
+  <script src="./Portfolio.js" defer></script>
+  </head>
   <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark px-3 fixed-top p-3">
-      <div class="container-fluid d-flex align-items-center">
-        <div class="flex-fill">
-          <a class="navbar-brand" href="#">
-            <img
-              src="./Asset/Fawaaz-logo.jpg"
-              alt="Avatar Logo"
-              style="width: 40px"
-              class="rounded-pill"
-            />
-          </a>
-        </div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <nav class="navbar navbar-expand-md navbar-dark portfolio-navbar fixed-top" aria-label="Main navigation">
+      <div class="container-fluid navbar-shell">
+        <a class="navbar-brand portfolio-brand" href="#home" aria-label="Oloyede Fawaaz — home">
+          <img
+            src="./Asset/Fawaaz-logo.jpg"
+            alt=""
+            class="portfolio-brand__avatar"
+          />
+          <span class="portfolio-brand__name">Oloyede Fawaaz<span>.</span></span>
+        </a>
         <button
-          class="navbar-toggler ms-auto"
+          class="navbar-toggler portfolio-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavbar"
+          aria-controls="collapsibleNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="portfolio-toggler__icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
         </button>
-        <div class="flex-fill d-flex justify-content-center">
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav gap-3">
-              <li class="nav-items">
-                <a class="text-white nav-link" href="#about">ABOUT</a>
-              </li>
-              <li class="nav-items">
-                <a class="text-white nav-link" href="#projects">PROJECTS</a>
-              </li>
-              <li class="nav-items">
-                <a class="text-white nav-link" href="#contact">CONTACT</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="flex-fill">
-          <form class="d-none d-md-flex justify-content-end">
-            <input
-              class="form-control me-2"
-              type="text"
-              placeholder="Search"
-              style="width: 300px"
-            />
-            <button class="btn btn-primary" type="button">Search</button>
-          </form>
+        <div class="collapse navbar-collapse portfolio-navigation" id="collapsibleNavbar">
+          <ul class="navbar-nav portfolio-nav-list">
+            <li class="nav-item">
+              <a class="nav-link portfolio-nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link portfolio-nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link portfolio-nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link portfolio-nav-link" href="#animations">Learn</a>
+            </li>
+          </ul>
+          <a class="portfolio-nav-cta" href="#contact">
+            Let's talk
+            <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </nav>
 
+    <main id="main-content" tabindex="-1">
     <section id="home">
-      <div
-        class="mt-5 pt-5 px-5 text-white container-fluid"
-        style="background-color: #3b82f6"
-      >
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <h4 class="greeting tv">Hi, I'm</h4>
-            <h1 class="display-4 fw-bold tv">Oloyede Fawaaz</h1>
+      <div class="hero-section">
+        <div class="hero-grid-pattern" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--two" aria-hidden="true"></div>
 
-            <h2 class="role tv">Front-End Developer | Cybersecurity Student</h2>
-            <p class="pitch tv cvv">
-              I'm learning to build clean, responsive interfaces and to think
-              like an attacker to defend them better.
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">
+              <span class="hero-status-dot" aria-hidden="true"></span>
+              Front-end development · Cybersecurity studies
             </p>
-            <a href="#projects" class="tv btn btn-primary btn-lg"
-              >View My Projects</a
-            >
 
-            <div class="social-icons mt-3">
-              <a
-                href="https://github.com/Korede-1ss"
-                target="_blank"
-                class="text-white me-3"
-              >
-                <i class="bi bi-github fs-4"></i>
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-title">Oloyede <span>Fawaaz</span></h1>
+            <h2 class="hero-role">Front-End Developer <span>&amp;</span> Cybersecurity Student</h2>
+            <p class="hero-description">
+              I build clean, responsive web experiences and explore how to make
+              them safer. Thoughtful design meets security-minded thinking.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="hero-button hero-button--primary">
+                Explore my work
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
               </a>
-              <a
-                href="https://linkedin.com/in/fawaazcyber"
-                target="_blank"
-                class="text-white me-3"
-              >
-                <i class="bi bi-linkedin fs-4"></i>
+              <a href="#contact" class="hero-button hero-button--secondary">
+                Let's connect
               </a>
-              <a href="mailto:fawaazmail@gmail.com" class="text-white">
-                <i class="bi bi-envelope-fill fs-4"></i>
-              </a>
+            </div>
+
+            <div class="hero-bottom">
+              <div class="hero-socials" aria-label="Social links">
+                <a
+                  href="https://github.com/Korede-1ss"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/fawaazcyber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:fawaazmail@gmail.com" aria-label="Email">
+                  <i class="bi bi-envelope" aria-hidden="true"></i>
+                </a>
+              </div>
+              <span class="hero-social-label">Find me online</span>
             </div>
           </div>
 
-          <div class="col-md-6 text-end px-5">
-            <img class="img-fluid ani" src="./Asset/Fawaaz-pic.png" alt="" />
+          <div class="hero-visual">
+            <div class="hero-orbit hero-orbit--outer" aria-hidden="true"></div>
+            <div class="hero-orbit hero-orbit--inner" aria-hidden="true"></div>
+            <div class="hero-portrait-frame">
+              <div class="hero-portrait-glow" aria-hidden="true"></div>
+              <img
+                class="hero-portrait"
+                src="./Asset/Fawaaz-pic.png"
+                alt="Portrait of Oloyede Fawaaz"
+              />
+            </div>
+            <div class="hero-float-card" aria-label="Focus: front-end and security">
+              <span class="hero-float-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></span>
+              <span><strong>Design with purpose</strong><small>Build with security in mind</small></span>
+            </div>
+            <span class="hero-visual-index" aria-hidden="true">01 / 03</span>
           </div>
         </div>
+
+        <a class="hero-scroll" href="#about">
+          <span class="hero-scroll-line" aria-hidden="true"></span>
+          Scroll to explore
+        </a>
       </div>
     </section>
 
     <!-- MY About -->
-    <section id="about" class="bg-dark text-white">
-      <!-- <div class="text-end py-5" style="position: sticky;" > <a href="#home" class="btn btn-primary rounded-circle but py-3 text-center  " ><i class="fa-solid fa-up-long fa-beat-fade fa-2xl"></i></a></div> -->
-      <div class="pt-5 px-5 text-white container-fluid row">
-        <br />
-        <br />
-
-        <div class="pt-5 col-md-6">
-          <h1 class="display-4 abb">About Me</h1>
-          <div>
-            <p class="abs">
-              I've been interested in writing code for as long as I can
-              remember. I got my first real introduction to it when an uncle of
-              mine taught me HTML and CSS — and I was hooked from the start.
-              There's something I still love about watching a design go from a
-              blank page to something real and working in the browser; that
-              moment is what's kept me building.
-            </p>
-            <br />
-            <p class="abs">
-              To sharpen those skills, I enrolled at SQI, where I strengthened
-              my HTML and CSS and learned Bootstrap. SQI is also where I'm now
-              getting introduced to cybersecurity — something I've actually been
-              curious about for a while. If I'm honest, I used to want to be a
-              hacker. These days, "ethical hacker" sounds a lot better — and
-              that's the direction I'm leaning into.
-            </p>
-          </div>
-        </div>
-        <div class="pt-5 col-md-6">
-          <h1 class="display-4 abb">My Journey</h1>
-          <center>
-            <br />
-
-            <div
-              class="sed rounded-circle text-center"
-              style="background-color: #3b82f6"
-            >
-              <h3 style="font-size: medium">Self-taught beginnings</h3>
-              <p>
-                Started learning HTML and CSS on my own, driven by curiosity.
-              </p>
-            </div>
-            <br />
-
-            <div>
-              <i class="fa-solid fa-arrow-down fa-beat-fade fa-2xl"></i>
-            </div>
-            <br />
-            <div
-              class="sed rounded-circle text-center"
-              style="background-color: #3b82f6"
-            >
-              <h3 style="font-size: medium">SQI COLLEGE ICT</h3>
-              <p>Strengthened my HTML and CSS skills, and learned Bootstrap.</p>
-            </div>
-            <br />
-
-            <div>
-              <i class="fa-solid fa-arrow-down fa-beat-fade fa-2xl"></i>
-            </div>
-            <br />
-            <div
-              class="sed rounded-circle text-center"
-              style="background-color: #3b82f6"
-            >
-              <h3 style="font-size: medium">Cybersecurity</h3>
-              <p>
-                Started learning how systems and websites can be broken into —
-                and defended.
-              </p>
-            </div>
-            <br>
-            <br>
-            <br>
-          </center>
-        </div>
-      </div>
-    </section>
-
- 
-    <!-- My Project -->
-    <section id="projects" class="bg-dark text-white px-5 "  >
-
-        <h1 class="display-4  abb">My Project</h1>
-        <br>
-        <br>
-
-<div class="bg-dark">
-      <!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active">  </button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div  class="carousel-item active  "  >
-      <a   href="https://korede-1ss.github.io/Printivo-clone/">
-      <img style="padding-right: 20px; padding-left: 20px; padding-bottom: 20px ; padding-top: 20px;" src="./Asset/printivo.png"   alt="Los Angeles" class="d-block w-100"> </a>
-      
-    </div>
-     <div class="carousel-item">
-            <a   href="https://korede-1ss.github.io/SQI-clone/">
-      <img style="padding-right: 20px; padding-left: 20px; padding-bottom: 20px ; padding-top: 20px;" src="./Asset/SQI.png" alt="New York" class="d-block w-100"></a>
-    </div>
-    <div class="carousel-item">
-      <img style="padding-right: 20px; padding-left: 20px; padding-bottom: 20px ; padding-top: 20px;" src="./Asset/Freecodechamp.png" alt="Chicago" class="d-block w-100">
-    </div>
-   
-  </div>
-
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev " type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-</div>
-
- <section class="container">
-      <div
-        class="container d-flex align-items-center justify-content-between py-5"      >
-        <div>
-          <h3
-            style="
-              font-family:
-                SF Pro,
-                sans-serif;
-            "
-          >
-            Popular Projects
-          </h3>
-        </div>
-        <div>
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <div class="about-copy">
+          <span class="section-tag">About Me</span>
+          <h2 class="about-heading">About Me</h2>
+          <p class="about-lead">
+            I'm a front-end developer with a growing passion for building clean,
+            intentional digital experiences and understanding how systems work
+            behind the scenes.
+          </p>
           <p>
-            <a style="text-decoration: none; color: #d98a8a" href="#"
-              >View all project</a
-            >
+            My interest in coding started with simple HTML and CSS, and it grew
+            from there. I enjoy taking an idea and turning it into something
+            usable, polished, and easy to interact with. That moment when a
+            blank canvas becomes a working design is still the part I love most.
+          </p>
+          <p>
+            I’m currently sharpening my skills through structured learning and
+            hands-on practice, while also exploring cybersecurity to deepen my
+            understanding of web security, problem-solving, and digital defense.
+            I’m especially drawn to the overlap between design, functionality,
+            and secure thinking.
           </p>
         </div>
-      </div>
 
-      <div class="row g-4">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-            <div class="img-wrap" style="background-size: cover;">
-              <img
-                class="im"
-                src="./Asset/printivo.png"
-                alt=""
-              />
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5><b> Printivo Clone</b></h5>
-         
-              <br>
-              <a href="https://korede-1ss.github.io/Printivo-clone/" class="btn button ">
-                Click to preview <i class="bi bi-chevron-right vb"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-            <div class="img-wrap">
-              <img
-                class="im"
-                src="./Asset/SQI.png"
-                alt=""
-              />
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5><b>SQI-Clone</b></h5>
-         
-              
-              <br>
-              <a href="#" class="btn button ">
-                Click to preview <i class="bi bi-chevron-right vb"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-            <div class="img-wrap">
-              <img
-                class="im"
-                src="./Asset/Freecodechamp.png"
-                alt=""
-              />
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5><b>Freecodechamp Clone</b></h5>
-         
-              <br>
-              <a href="https://korede-1ss.github.io/SQI-clone/" class="btn button ">
-                Click to preview <i class="bi bi-chevron-right vb"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-            <div class="img-wrap">
-              <img
-                class="im"
-                src="./Asset/Exam.png"
-                alt=""
-              />
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5><b>Exam Page</b></h5>
-              <br>
-              <br>
+        <div class="about-journey">
+          <span class="section-tag">My Journey</span>
+          <h2 class="about-heading">My Journey</h2>
 
-              <a href="#" class="btn button ">
-                Click to preview <i class="bi bi-chevron-right vb"></i>
-              </a>
-            </div>
+          <div class="story-list">
+            <article class="story-item">
+              <span class="story-step">01</span>
+              <div class="story-content">
+                <h3>Curiosity-led learning</h3>
+                <p>
+                  I began learning HTML and CSS on my own, driven by curiosity
+                  and the joy of creating something visual from code.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-item">
+              <span class="story-step">02</span>
+              <div class="story-content">
+                <h3>SQI College ICT</h3>
+                <p>
+                  I strengthened my front-end foundation and expanded into
+                  Bootstrap, layout systems, and cleaner UI development.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-item">
+              <span class="story-step">03</span>
+              <div class="story-content">
+                <h3>Cybersecurity focus</h3>
+                <p>
+                  I’m now learning how websites and systems can be attacked and
+                  how to build safer, more resilient digital experiences.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-      <br>
-      <br>
-      <br>
     </section>
-    
 
+    <section id="skills" class="skills-section">
+      <div class="skills-container">
+        <header class="skills-header">
+          <p class="skills-eyebrow">WHAT I’M BUILDING ON</p>
+          <h2 class="display-4">Skills in progress</h2>
+          <p>
+            I’m growing these skills through coursework and hands-on projects.
+            Each one is connected to something I’ve practiced—not a proficiency
+            score.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <span class="skill-card__icon"><i class="bi bi-code-slash" aria-hidden="true"></i></span>
+            <div>
+              <h2>HTML &amp; CSS</h2>
+              <p>Building page structure, styling, and responsive interfaces.</p>
+              <span class="skill-example">Practiced in: Printivo Clone · SQI Clone</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-card__icon"><i class="bi bi-grid-1x2" aria-hidden="true"></i></span>
+            <div>
+              <h2>Bootstrap &amp; layout</h2>
+              <p>Using grid, components, and spacing to shape adaptable pages.</p>
+              <span class="skill-example">Practiced in: Printivo Clone · SQI Clone</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-card__icon"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span>
+            <div>
+              <h2>JavaScript &amp; interaction</h2>
+              <p>Adding small behaviors and motion that make interfaces feel alive.</p>
+              <span class="skill-example">Practiced in: Portfolio interactions · Animation Lab</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-card__icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
+            <div>
+              <h2>Cybersecurity fundamentals</h2>
+              <p>Learning to think about web security and safer digital experiences.</p>
+              <span class="skill-example">Currently studying · SQI College ICT</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section text-white">
+      <div class="projects-container">
+        <header class="projects-header">
+          <p class="projects-eyebrow">SELECTED WORK</p>
+          <h2 class="display-4 abb">Projects I’ve built</h2>
+          <p class="projects-intro">
+            A collection of website recreations and frontend projects I’ve
+            worked on while growing my skills.
+          </p>
+        </header>
+
+        <div class="project-grid">
+          <article class="project-card project-card--featured">
+            <a
+              class="project-preview"
+              href="https://korede-1ss.github.io/Printivo-clone/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Preview the Printivo Clone"
+            >
+              <img src="./Asset/printivo.png" alt="Printivo Clone website preview" />
+              <span class="project-preview-label">FEATURED PROJECT</span>
+              <span class="project-preview-arrow" aria-hidden="true">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="project-details">
+              <div>
+                <p class="project-type">WEBSITE RECREATION</p>
+                <h2>Printivo Clone</h2>
+                <p>
+                  A recreation of the Printivo website, built as a frontend
+                  practice project focused on responsive layouts and interface
+                  details.
+                </p>
+                <ul class="project-tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="project-action"
+                  href="https://korede-1ss.github.io/Printivo-clone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live demo <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <a
+                  class="project-action project-action--source"
+                  href="https://github.com/Korede-1ss/Printivo-clone"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bi bi-github" aria-hidden="true"></i> Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a
+              class="project-preview"
+              href="https://korede-1ss.github.io/SQI-clone/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Preview the SQI Clone"
+            >
+              <img src="./Asset/SQI.png" alt="SQI Clone website preview" />
+              <span class="project-preview-arrow" aria-hidden="true">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="project-details">
+              <div>
+                <p class="project-type">WEBSITE RECREATION</p>
+                <h2>SQI Clone</h2>
+                <p>
+                  A responsive frontend recreation of the SQI College website,
+                  built to practice page structure and styling.
+                </p>
+                <ul class="project-tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="project-action"
+                  href="https://korede-1ss.github.io/SQI-clone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live demo <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <a
+                  class="project-action project-action--source"
+                  href="https://github.com/Korede-1ss/SQI-clone"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bi bi-github" aria-hidden="true"></i> Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img
+                src="./Asset/Freecodechamp.png"
+                alt="Screenshot preview of the FreeCodeCamp learning project"
+              />
+              <span class="project-preview-arrow" aria-hidden="true">
+                <i class="bi bi-code-slash"></i>
+              </span>
+            </div>
+            <div class="project-details">
+              <div>
+                <p class="project-type">FRONTEND PRACTICE</p>
+                <h2>FreeCodeCamp</h2>
+                <p>
+                  A learning project inspired by the FreeCodeCamp platform,
+                  built to practice reusable page sections and responsive UI.
+                </p>
+                <ul class="project-tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Responsive UI</li>
+                </ul>
+              </div>
+              <span class="project-action project-action--unavailable">
+                Demo link not available yet
+              </span>
+              <span class="project-action project-action--unavailable">
+                Source link not available yet
+              </span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="./Asset/Exam.png" alt="Screenshot preview of the online exam interface project" />
+              <span class="project-preview-arrow" aria-hidden="true">
+                <i class="bi bi-code-slash"></i>
+              </span>
+            </div>
+            <div class="project-details">
+              <div>
+                <p class="project-type">INTERFACE DESIGN</p>
+                <h2>Exam Page</h2>
+                <p>
+                  A focused online exam interface concept, designed to keep
+                  instructions and key actions easy to find.
+                </p>
+                <ul class="project-tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>UI design</li>
+                </ul>
+              </div>
+              <span class="project-action project-action--unavailable">
+                Demo link not available yet
+              </span>
+              <span class="project-action project-action--unavailable">
+                Source link not available yet
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="animations" class="animation-lab">
+      <div class="animation-lab__container">
+        <header class="animation-lab__header">
+          <p class="animation-lab__eyebrow">LEARN BY SEEING</p>
+          <h2 class="display-4">A tiny animation lab</h2>
+          <p>
+            Small CSS animations, shown in motion with the code that creates
+            them. Pick an effect, watch it, then try the snippet in your own
+            project.
+          </p>
+        </header>
+
+        <div class="animation-grid">
+          <article class="animation-card">
+            <div class="animation-card__heading">
+              <div>
+                <span class="animation-card__number">01 / ENTRANCE</span>
+                <h3>Fade &amp; rise</h3>
+              </div>
+              <button class="animation-replay" type="button" data-replay aria-label="Replay the fade and rise animation">
+                <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+                Replay
+              </button>
+            </div>
+            <div class="animation-stage animation-stage--fade">
+              <span class="animation-stage__label">LIVE PREVIEW</span>
+              <div class="sample-fade" aria-hidden="true">
+                <span class="sample-fade__spark"></span>
+                Hello, motion.
+              </div>
+            </div>
+            <div class="animation-code">
+              <span class="animation-code__label">CSS</span>
+              <pre><code>.fade-in {
+  animation: fade-up 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes fade-up {
+  from { opacity: .35; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}</code></pre>
+            </div>
+            <p class="animation-card__note">Animate opacity and position for a soft entrance.</p>
+          </article>
+
+          <article class="animation-card">
+            <div class="animation-card__heading">
+              <div>
+                <span class="animation-card__number">02 / FEEDBACK</span>
+                <h3>Soft pulse</h3>
+              </div>
+              <button class="animation-replay" type="button" data-replay aria-label="Replay the soft pulse animation">
+                <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+                Replay
+              </button>
+            </div>
+            <div class="animation-stage animation-stage--pulse">
+              <span class="animation-stage__label">LIVE PREVIEW</span>
+              <div class="sample-pulse" aria-hidden="true">
+                <span class="sample-pulse__dot"></span>
+                Hover-worthy button
+              </div>
+            </div>
+            <div class="animation-code">
+              <span class="animation-code__label">CSS</span>
+              <pre><code>.pulse {
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}</code></pre>
+            </div>
+            <p class="animation-card__note">A gentle scale can draw attention without shouting.</p>
+          </article>
+
+          <article class="animation-card">
+            <div class="animation-card__heading">
+              <div>
+                <span class="animation-card__number">03 / LOADING</span>
+                <h3>Orbiting dot</h3>
+              </div>
+              <button class="animation-replay" type="button" data-replay aria-label="Replay the orbiting dot animation">
+                <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+                Replay
+              </button>
+            </div>
+            <div class="animation-stage animation-stage--orbit">
+              <span class="animation-stage__label">LIVE PREVIEW</span>
+              <div class="sample-orbit" aria-hidden="true">
+                <span></span>
+              </div>
+            </div>
+            <div class="animation-code">
+              <span class="animation-code__label">CSS</span>
+              <pre><code>.orbit {
+  animation: spin 2.4s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(1turn); }
+}</code></pre>
+            </div>
+            <p class="animation-card__note">Combine a rotating wrapper with an offset child.</p>
+          </article>
+        </div>
+      </div>
     </section>
       <!-- <a href="#home" class="btn btn-primary rounded-circle but py-3 text-center  " ><i class="fa-solid fa-up-long fa-beat-fade fa-2xl"></i></a> -->
 
-    <!-- Contact -->
-  <section id="contact" class="bg-dark text-white py-5">
-  <div class="px-5">
-         <h1 class="display-4  abb">Contact Me</h1>
-         <br>
-         <br>
-    <div class="row g-5 align-items-center">
+    <section id="contact" class="contact-section text-white">
+      <div class="contact-container">
+        <header class="contact-heading">
+          <p class="contact-eyebrow">LET’S CONNECT</p>
+          <h2 class="display-4 abb">Have a project in mind?</h2>
+          <p>
+            I’m open to internships, collaborations, and conversations about
+            web development and cybersecurity. I’d love to hear from you.
+          </p>
+        </header>
 
-      
-      <div class="col-12 col-md-6">
-        <h4>I'm open to internships, collaborations, and conversations about web development and cybersecurity. Reach out anytime.</h4>
-        <br>
-      
-        <div class="social-icons mt-3">
-              <a
-                href="https://github.com/Korede-1ss"
-                target="_blank"
-                class="text-white me-3"
-              >
-                <i class="bi bi-github fs-4"></i>
-              </a>
-              <a
-                href="https://linkedin.com/in/fawaazcyber"
-                target="_blank"
-                class="text-white me-3"
-              >
-                <i class="bi bi-linkedin fs-4"></i>
-              </a>
-              <a href="mailto:fawaazmail@gmail.com" class="text-white">
-                <i class="bi bi-envelope-fill fs-4"></i>
-              </a>
+        <div class="contact-layout">
+          <div class="contact-info">
+            <div class="contact-availability">
+              <span class="availability-indicator" aria-hidden="true"></span>
+              <span>Available for opportunities</span>
             </div>
 
-      </div>
+            <h2>Let’s make something useful together.</h2>
+            <p class="contact-copy">
+              Have a question, an idea, or an opportunity? Send me a message
+              and I’ll get back to you.
+            </p>
 
+            <a class="contact-email" href="mailto:fawaazmail@gmail.com">
+              <span class="contact-icon" aria-hidden="true">
+                <i class="bi bi-envelope"></i>
+              </span>
+              <span>
+                <span class="contact-detail-label">EMAIL ME</span>
+                <span class="contact-detail-value">fawaazmail@gmail.com</span>
+              </span>
+              <i class="bi bi-arrow-up-right contact-email-arrow" aria-hidden="true"></i>
+            </a>
 
-      <div class="col-12 col-md-6 dark-theme">
-          <div class=" border border-secondary rounded-4 p-4 bbg">
-
-     <h3 class="mb-3">Send Me a Message</h3>
-      <div class=" d-flex gap-1">
-          <div><i class="fa-solid fa-circle fa-beat-fade fa-sm text-success"></i></div> 
-            <span>Open to opportunities</span>
+            <div class="contact-socials">
+              <p>FIND ME ONLINE</p>
+              <div class="social-icons">
+                <a
+                  href="https://github.com/Korede-1ss"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/fawaazcyber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                >
+                  <i class="bi bi-linkedin"></i>
+                </a>
               </div>
-              <br>
+            </div>
+          </div>
 
+          <div class="contact-form-card">
+            <div class="contact-form-heading">
+              <div>
+                <p class="contact-eyebrow">SEND A NOTE</p>
+                <h2>Start a conversation</h2>
+              </div>
+              <span class="contact-form-icon" aria-hidden="true">
+                <i class="bi bi-chat-square-text"></i>
+              </span>
+            </div>
+            <p class="contact-form-intro">
+              Fill in the form below and your message will land in my inbox.
+            </p>
 
-       <form action="https://api.web3forms.com/submit" method="POST" data-bs-theme="dark">
+            <form action="https://api.web3forms.com/submit" method="POST" data-bs-theme="dark">
+              <input type="hidden" name="access_key" value="a8b9e50e-9491-4cad-82ed-7d67e91d3b21">
+              <input type="hidden" name="subject" value="New message from my portfolio">
 
-       
-       
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+              </div>
 
-  <input type="hidden" name="access_key" value="a8b9e50e-9491-4cad-82ed-7d67e91d3b21">
-  <input type="hidden" name="subject" value="New message from my portfolio">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+              </div>
 
-  <div class="mb-3">
-    <label for="name" class="form-label"  >Name:</label>
-    <input type="text" class="form-control"  id="name" name="name" placeholder="Enter name" required>
-  </div>
+              <div class="mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me a little about what you have in mind..." required></textarea>
+              </div>
 
-  <div class="mb-3">
-    <label for="email" class="form-label">Email:</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
-  </div>
-
-  <div class="mb-3">
-    <label for="message" class="form-label">Message:</label>
-    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-  </div>
-<input type="checkbox" name="botcheck" style="display: none;">
-  <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
-
-</div>
+              <input type="checkbox" name="botcheck" class="contact-botcheck" tabindex="-1" aria-hidden="true">
+              <button type="submit" class="btn btn-primary contact-submit">
+                Send message <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </button>
+              <p class="contact-form-note">
+                <i class="bi bi-lock" aria-hidden="true"></i>
+                Your details are only used to reply to your message.
+              </p>
+            </form>
+          </div>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-
-     </div>
+    </main>
 
   </body>
 </html>
